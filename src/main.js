@@ -60,7 +60,6 @@ async function onSubmit(e) {
   queryItem = e.currentTarget.searchQuery.value;
   currentPage = 1;
   clearGallery();
-  lightbox.refresh();
 
   if (queryItem === '') {
     return;
@@ -73,6 +72,7 @@ async function onSubmit(e) {
       createGalleryCard(res.hits);
       btnLoadMore.show();
       scrollPage();
+      lightbox.refresh();
     }
 
     if (res.totalHits === 0) {

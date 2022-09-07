@@ -36,8 +36,11 @@ a {
   border-bottom-left-radius: 5px;
 }
 
-.input-field:active {
+.input-field:active,
+.input-field:focus,
+.input-field:hover {
   border-color: transparent;
+  outline: none;
 }
 
 .button {
